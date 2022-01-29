@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../.gradle/caches/transforms-3/7b1ed03329eb8b834a93db547bb89a15/transformed/jetified-kgspicker-release/res/layout/activity_picker2.xml" value="0.14361702127659576" />
+        <entry key="../../.gradle/caches/transforms-3/7b1ed03329eb8b834a93db547bb89a15/transformed/jetified-kgspicker-release/res/layout/fragment_camera.xml" value="0.14447463768115942" />
+        <entry key="../../.gradle/caches/transforms-3/7b1ed03329eb8b834a93db547bb89a15/transformed/jetified-kgspicker-release/res/layout/native_ad_view_picker.xml" value="0.14447463768115942" />
+        <entry key="../../.gradle/caches/transforms-3/7b1ed03329eb8b834a93db547bb89a15/transformed/jetified-kgspicker-release/res/layout/picker_item_category_tabs.xml" value="0.14447463768115942" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3720254314259764" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
