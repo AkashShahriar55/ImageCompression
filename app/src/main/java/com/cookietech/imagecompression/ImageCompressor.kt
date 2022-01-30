@@ -3,7 +3,6 @@ package com.cookietech.imagecompression
 import android.graphics.*
 import android.media.ExifInterface
 import android.util.Log
-import timber.log.Timber
 import java.io.File
 import java.io.IOException
 

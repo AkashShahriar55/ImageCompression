@@ -24,9 +24,6 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import com.kitegamesstudio.kgspicker.builder.ImageFormatClass
-import com.kitegamesstudio.kgspicker.builder.PickerBuilderClass
-import com.kitegamesstudio.kgspicker.builder.PickerCallback
 import java.io.File
 import java.io.FileOutputStream
 import java.util.*
