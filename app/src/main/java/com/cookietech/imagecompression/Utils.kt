@@ -10,6 +10,7 @@ import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.util.Log
+import android.webkit.MimeTypeMap
 import android.widget.Toast
 import java.io.File
 import java.io.FileOutputStream
@@ -48,7 +49,8 @@ object Utils {
         }
     }
 
-    fun savePhoto(bmp: Bitmap, mContext: Context, quality:Int, filename:String): File? {
+    fun savePhoto(bmp: Bitmap, mContext: Context, quality:Int, name:String): File? {
+        val filename = name.substring(0, name.lastIndexOf("."))
         return if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q) {
             val imageFileFolder =
                 File(Environment.getExternalStorageDirectory(), "Compressed")
@@ -65,7 +67,7 @@ object Utils {
             var imageFileName: File? = null
             val picId: String = fromInt(System.currentTimeMillis()) + ""
             try {
-                imageFileName = File(imageFileFolder, "$filename")
+                imageFileName = File(imageFileFolder, "$filename.jpg")
                 out = FileOutputStream(imageFileName)
                 bmp.compress(Bitmap.CompressFormat.JPEG, quality, out)
                 Log.d("OutputTest", "png.......")
@@ -111,6 +113,8 @@ object Utils {
             newImage.put(MediaStore.MediaColumns.HEIGHT, bmp.height)
             newImage.put(MediaStore.MediaColumns.RELATIVE_PATH, path)
             newImage.put(MediaStore.MediaColumns.IS_PENDING, 1)
+            mimtype = MimeTypeMap.getSingleton().getMimeTypeFromExtension("jpg")
+            newImage.put(MediaStore.MediaColumns.MIME_TYPE,mimtype)
             val newImageUri = mContext.contentResolver.insert(collection, newImage)
             var imageFileName: File
             try {
